@@ -1,0 +1,415 @@
+form {
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6e8efb;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    /* height: 100px; */
+    resize: vertical;
+}
+
+/* Flexbox Layout for Responsiveness */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.half-width {
+    flex: 1 1 calc(50% - 20px);
+}
+
+.full-width {
+    flex: 1 1 100%;
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.media-item {
+    position: relative;
+    display: inline-block;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 12px 20px;
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.submit-btn:disabled,
+.cancel-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+
+/* Interactive states for inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b565ff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Media container styling */
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.media-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.media-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.media-item span {
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.media-item span:hover {
+    color: #0056b3;
+}
+
+/* File input styling */
+input[type="file"] {
+    padding: 10px;
+    font-size: 14px;
+    color: #888;
+    border: 2px dashed #ddd;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #007bff;
+}
+
+/* Action buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cancel-btn {
+    width: 10%;
+    /* height: 2rem; */
+    padding: 10px;
+    background: linear-gradient(135deg, #ff6224, #f7146b);
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+    width: 10%;
+    /* height: 2rem; */
+    padding: 10px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+
+p.add-hotel {
+    font-size: 0.8rem;
+    /* font-weight: bold; */
+    color: #ff3a3ab9;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+    /* text-transform: uppercase; */
+    border-bottom: 1px solid #007bff67;
+    padding: 5px;
+}
+
+/* table design */
+
+.table-responsive {
+    overflow-x: auto;
+    padding: 1rem;
+    /* Enables horizontal scrolling */
+    /* border: 1px solid #ddd; */
+    /* Add border to the table wrapper */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+    /* Removes space between cells */
+}
+
+th,
+td {
+    padding: 12px;
+    color: #123862;
+    /* Add some padding */
+    text-align: left;
+    font-weight: 500;
+    /* Align text to the left */
+    border: 1px solid #ddd;
+    /* Add border to table cells */
+}
+
+th {
+    background: #9288f0d9;
+    color: #fff;
+    /* Light gray background for headers */
+}
+
+.delete-icon {
+    color: red;
+    margin-right: 8px;
+}
+
+.edit-icon {
+    color: rgb(4, 226, 108);
+    margin-right: 8px;
+}
+
+
+
+/* pagination css */
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.page-item {
+    margin: 0;
+    /* Remove margin to eliminate gaps */
+}
+
+.page-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 5px;
+    /* Add margin only to the left for space between items */
+}
+
+.page-link:first-child {
+    margin-left: 0;
+    /* Remove left margin for the first item */
+}
+
+.page-link:hover {
+    background-color: #f1f1f1;
+}
+
+.active .page-link {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+    cursor: not-allowed;
+    color: #ccc;
+    border-color: #ccc;
+}
+
+.page-headings-with-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    /* padding-bottom: 10px; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        /* Stack elements */
+    }
+
+    th {
+        display: none;
+        /* Hide header in mobile view */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        /* Add space between rows */
+    }
+
+    td {
+        text-align: right;
+        /* Align text to the right */
+        position: relative;
+        /* Position for pseudo-element */
+        padding-left: 50%;
+        /* Add padding for label */
+    }
+
+    td::before {
+        content: attr(data-label);
+        /* Use data-label for column headers */
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: bold;
+        /* Bold labels */
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .half-width {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .media-item {
+        width: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input[type="file"] {
+        padding: 8px;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        width: 30%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .half-width {
+        width: 48%;
+        float: left;
+    }
+
+    .full-width {
+        width: 100%;
+        clear: both;
+    }
+}
